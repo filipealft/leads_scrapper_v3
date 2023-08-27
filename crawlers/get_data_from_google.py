@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 import re
+import csv
 
 class GoogleLocalScraper():
 
@@ -64,13 +65,20 @@ class GoogleLocalScraper():
         if self.driver:
             self.driver.quit()
 
+def read_csv_urls(filename):
+    urls = []
+    with open(filename, 'r') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            urls.append(row['url'])
+    return urls
+
 def funcao_main():
-    urls = [
-        "https://www.google.com/localservices/prolist?g2lbs=AP8S6EMVPDkPFmmWH0ug9_GMeqphsIC8aMwEdpr7oG70_KnEpvr-kDevADrLW4q4g_PzMsCFGMbNB1n6_RXmWr_qLKwUpEWOHhAdJs99YGXeH6uQiYs5AEXSNv2eoe3fAFzkwdL6H6y1&hl=pt-BR&gl=br&cs=1&ssta=1&oq=barbearia%20florianopolis&src=2&sa=X&sqi=2&q=barbearia%20florianopolis&ved=2ahUKEwjsnYvw1vuAAxV1r5UCHbhhDLkQjdcJegQIABAF&scp=ChBnY2lkOmJhcmJlcl9zaG9wEgAaACoJQmFyYmVhcmlh&slp=MgBAAVIECAIgAIgBAJoBBgoCFxkQAQ%3D%3D", 
-        "https://www.google.com/localservices/prolist?g2lbs=AP8S6EPyPAUFx_u3AaDkoxat5faeSKWttD2jXveRqig17O42Tw3eoUEQUrKQZyn24oBDcN4dSuY8IG8Bk_Z9YG9RLVc9hKdArsdS7NER-NNBlj9DiclDHsUGJ-5iu35HMu9T4UGiSdBr&hl=pt-BR&gl=br&cs=1&ssta=1&oq=salao%20de%20beleza%20florianopolis&src=2&sa=X&q=loja%20de%20bebida%20florianopolis&ved=2ahUKEwjA6r_34_uAAxWbkpUCHbnICRgQjdcJegQIABAF&scp=CgpnY2lkOnN0b3JlEgAaACoETG9qYQ%3D%3D&slp=MgBAAVIECAIgAIgBAJoBBgoCFxkQAQ%3D%3D",
-    ]
+    csv_filename = '/Users/user/Documents/i9_tech/leads_scrapper_v3/crawlers/urls.csv'
+    urls = read_csv_urls(csv_filename)
+
     chrome_options = Options()
-    chrome_options.add_argument("--headless") 
+    chrome_options.add_argument("--headless")
 
     scraper = GoogleLocalScraper()
     scraper.set_urls(urls)
