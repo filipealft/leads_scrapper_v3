@@ -67,3 +67,4 @@ phone_number = '4899554102'
 message = 'Olá! Esta é uma mensagem automática!'
 bot.send_message(phone_number, message)
 
+####
