@@ -17,7 +17,6 @@ class WhatsAppBot():
                 time.sleep(1)
                 print("Chrome com depurador remoto já está em execução.")
                 return
-
         try:
             subprocess.Popen([
                 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", # Caminho para o Chrome no Mac
