@@ -13,24 +13,28 @@ class WhatsAppBot():
     def init_instance_chrome(self):
         chrome_options = Options()
         chrome_options.add_argument("--ignore-certificate-errors")
-        # chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--headless")
         chrome_options.add_argument("--no-sandbox") 
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("user-data-dir=selenium")
-
+        chrome_options.add_argument("--start-maximized")
+        chrome_options.add_argument("user-agent=User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36")
         self.driver = webdriver.Chrome(options=chrome_options)
 
     def send_messages(self, phone_numbers, message):
-
-        for phone in phone_numbers:
+        self.driver.set_window_size(1920, 1080)
+        for index, phone in enumerate(phone_numbers):
             self.driver.get(f'https://web.whatsapp.com/send?phone={phone}')
-            time.sleep(10)
-            text_box = WebDriverWait(self.driver, 60).until(EC.presence_of_element_located((By.XPATH, '//div[@contenteditable="true" and @title="Mensagem"]')))
-
+            text_box = WebDriverWait(self.driver, 15).until(EC.presence_of_element_located((By.XPATH, '//div[@role="textbox" and @title="Mensagem"]')))
             text_box.send_keys(message)
             time.sleep(3)
             text_box.send_keys(Keys.ENTER)
-            time.sleep(3) 
+            time.sleep(3)
+            self.take_screenshot(f'screenshot_{index}.png')
+
+    def take_screenshot(self, filename):
+        path_to_save = '/Users/user/Documents/' + filename
+        self.driver.save_screenshot(path_to_save)
 
     def quit(self):
         if self.driver:
@@ -45,4 +49,4 @@ while True:
     bot.init_instance_chrome()
     bot.send_messages(phone_numbers, message)
     bot.quit() 
-    time.sleep(30)  
+    time.sleep(30)
