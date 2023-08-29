@@ -29,12 +29,6 @@ class WhatsAppBot():
             text_box.send_keys(message)
             time.sleep(3)
             text_box.send_keys(Keys.ENTER)
-            time.sleep(3)
-            self.take_screenshot(f'screenshot_{index}.png')
-
-    def take_screenshot(self, filename):
-        path_to_save = '/Users/user/Documents/' + filename
-        self.driver.save_screenshot(path_to_save)
 
     def quit(self):
         if self.driver:
