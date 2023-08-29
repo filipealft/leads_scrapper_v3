@@ -1,0 +1,17 @@
+[33261:259:0828/220508.366829:WARNING:chrome_main_delegate.cc(596)] This is Chrome version 116.0.5845.110 (not a warning)
+[33261:259:0828/220508.610425:INFO:chrome_browser_cloud_management_controller.cc(168)] Starting CBCM Controller Initialization
+[33261:259:0828/220508.610470:INFO:chrome_browser_cloud_management_controller.cc(196)] No machine level policy manager exists.
+[33261:33287:0828/220508.652961:ERROR:trust_store_mac.cc(844)] Error parsing certificate:
+ERROR: The policy qualifiers SEQUENCE is empty
+ERROR: Failed parsing policy qualifiers
+ERROR: Failed parsing certificate policies
+
+[33261:259:0828/220509.561112:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[33274:259:0828/220509.598856:ERROR:shared_image_manager.cc(267)] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[33274:259:0828/220509.598939:ERROR:skia_output_device_buffer_queue.cc(363)] Invalid mailbox.
+[33274:259:0828/220509.599020:ERROR:shared_image_manager.cc(267)] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[33274:259:0828/220509.599065:ERROR:skia_output_device_buffer_queue.cc(363)] Invalid mailbox.
+[33285:259:0828/220510.271562:ERROR:system_services.cc(31)] SetApplicationIsDaemon: Error Domain=NSOSStatusErrorDomain Code=-50 "paramErr: error in user parameter list" (-50)
+[33275:14851:0828/220514.419506:WARNING:sqlite_persistent_store_backend_base.cc(194)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:242 to client_task_runner_.
+[33275:14851:0828/220514.420976:WARNING:sqlite_persistent_store_backend_base.cc(194)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:242 to client_task_runner_.
+[33261:259:0828/220514.464709:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

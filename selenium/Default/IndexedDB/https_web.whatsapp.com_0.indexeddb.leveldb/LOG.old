@@ -1,0 +1,13 @@
+2023/08/28-22:05:09.404 8207 Reusing MANIFEST /Users/user/Documents/i9_tech/leads_scrapper_v3/selenium/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/08/28-22:05:09.404 8207 Recovering log #131
+2023/08/28-22:05:09.450 8207 Reusing old log /Users/user/Documents/i9_tech/leads_scrapper_v3/selenium/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000131.log 
+2023/08/28-22:05:12.846 a303 Level-0 table #136: started
+2023/08/28-22:05:12.883 a303 Level-0 table #136: 1074224 bytes OK
+2023/08/28-22:05:12.923 a303 Delete type=0 #131
+2023/08/28-22:05:13.354 ba03 Compacting 1@1 + 1@2 files
+2023/08/28-22:05:13.415 ba03 Generated table #137@1: 31894 keys, 2203582 bytes
+2023/08/28-22:05:13.442 ba03 Generated table #138@1: 13767 keys, 305113 bytes
+2023/08/28-22:05:13.442 ba03 Compacted 1@1 + 1@2 files => 2508695 bytes
+2023/08/28-22:05:13.480 ba03 compacted to: files[ 0 0 2 0 0 0 0 ]
+2023/08/28-22:05:13.480 ba03 Delete type=2 #136
+2023/08/28-22:05:13.480 ba03 Delete type=2 #133
