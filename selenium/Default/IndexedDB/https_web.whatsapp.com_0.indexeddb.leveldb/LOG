@@ -1,14 +1,54 @@
-2023/08/28-22:53:33.249 8107 Reusing MANIFEST /Users/user/Documents/i9_tech/leads_scrapper_v3/selenium/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/08/28-22:53:33.250 8107 Recovering log #140
-2023/08/28-22:53:33.273 8107 Reusing old log /Users/user/Documents/i9_tech/leads_scrapper_v3/selenium/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000140.log 
-2023/08/28-22:53:59.909 8107 Level-0 table #146: started
-2023/08/28-22:53:59.949 8107 Level-0 table #146: 1056627 bytes OK
-2023/08/28-22:54:00.003 8107 Delete type=0 #140
-2023/08/28-22:54:00.917 9603 Compacting 1@1 + 2@2 files
-2023/08/28-22:54:00.983 9603 Generated table #147@1: 37584 keys, 2206537 bytes
-2023/08/28-22:54:01.025 9603 Generated table #148@1: 35357 keys, 1111982 bytes
-2023/08/28-22:54:01.025 9603 Compacted 1@1 + 2@2 files => 3318519 bytes
-2023/08/28-22:54:01.063 9603 compacted to: files[ 0 0 2 0 0 0 0 ]
-2023/08/28-22:54:01.064 9603 Delete type=2 #143
-2023/08/28-22:54:01.064 9603 Delete type=2 #142
-2023/08/28-22:54:01.064 9603 Delete type=2 #146
+2023/08/29-16:49:02.002 8303 Reusing MANIFEST /Users/user/Documents/i9_tech/leads_scrapper_v3/selenium/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/08/29-16:49:02.002 8303 Recovering log #190
+2023/08/29-16:49:02.010 8303 Reusing old log /Users/user/Documents/i9_tech/leads_scrapper_v3/selenium/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000190.log 
+2023/08/29-16:49:02.011 8303 Delete type=2 #189
+2023/08/29-16:49:02.011 8303 Delete type=2 #188
+2023/08/29-16:49:02.011 8303 Delete type=2 #187
+2023/08/29-16:49:05.632 8503 Level-0 table #197: started
+2023/08/29-16:49:05.670 8503 Level-0 table #197: 1253523 bytes OK
+2023/08/29-16:49:05.711 8503 Delete type=0 #190
+2023/08/29-16:49:05.746 8503 Compacting 1@1 + 3@2 files
+2023/08/29-16:49:05.822 8503 Generated table #198@1: 55925 keys, 2214452 bytes
+2023/08/29-16:49:05.882 8503 Generated table #199@1: 15710 keys, 2193615 bytes
+2023/08/29-16:49:05.920 8503 Generated table #200@1: 13955 keys, 683859 bytes
+2023/08/29-16:49:05.920 8503 Compacted 1@1 + 3@2 files => 5091926 bytes
+2023/08/29-16:49:05.960 8503 compacted to: files[ 0 0 6 0 0 0 0 ]
+2023/08/29-16:49:05.961 8503 Delete type=2 #197
+2023/08/29-16:49:05.961 8503 Delete type=2 #194
+2023/08/29-16:49:05.961 8503 Delete type=2 #192
+2023/08/29-16:49:05.961 8503 Delete type=2 #193
+2023/08/29-16:49:06.334 8503 Level-0 table #202: started
+2023/08/29-16:49:06.375 8503 Level-0 table #202: 1258407 bytes OK
+2023/08/29-16:49:06.415 8503 Delete type=0 #196
+2023/08/29-16:49:06.421 8503 Compacting 1@1 + 3@2 files
+2023/08/29-16:49:06.495 8503 Generated table #203@1: 60055 keys, 2217337 bytes
+2023/08/29-16:49:06.555 8503 Generated table #204@1: 13321 keys, 2187894 bytes
+2023/08/29-16:49:06.593 8503 Generated table #205@1: 16844 keys, 807369 bytes
+2023/08/29-16:49:06.593 8503 Compacted 1@1 + 3@2 files => 5212600 bytes
+2023/08/29-16:49:06.629 8503 compacted to: files[ 0 0 6 0 0 0 0 ]
+2023/08/29-16:49:07.157 8503 Level-0 table #207: started
+2023/08/29-16:49:07.193 8503 Level-0 table #207: 1511234 bytes OK
+2023/08/29-16:49:07.234 8503 Delete type=0 #201
+2023/08/29-16:49:07.234 8503 Delete type=2 #202
+2023/08/29-16:49:07.234 8503 Delete type=2 #200
+2023/08/29-16:49:07.235 8503 Delete type=2 #198
+2023/08/29-16:49:07.235 8503 Delete type=2 #199
+2023/08/29-16:49:07.242 8503 Compacting 1@1 + 3@2 files
+2023/08/29-16:49:07.307 8503 Generated table #208@1: 55879 keys, 2201931 bytes
+2023/08/29-16:49:07.358 8503 Generated table #209@1: 11732 keys, 2168671 bytes
+2023/08/29-16:49:07.417 8503 Generated table #210@1: 26473 keys, 1530440 bytes
+2023/08/29-16:49:07.417 8503 Compacted 1@1 + 3@2 files => 5901042 bytes
+2023/08/29-16:49:07.456 8503 compacted to: files[ 0 0 6 0 0 0 0 ]
+2023/08/29-16:49:07.457 8503 Delete type=2 #203
+2023/08/29-16:49:07.457 8503 Delete type=2 #205
+2023/08/29-16:49:07.457 8503 Delete type=2 #204
+2023/08/29-16:49:07.457 8503 Delete type=2 #207
+2023/08/29-16:49:12.299 8503 Level-0 table #212: started
+2023/08/29-16:49:12.346 8503 Level-0 table #212: 1362075 bytes OK
+2023/08/29-16:49:12.386 8503 Delete type=0 #206
+2023/08/29-16:49:12.409 8303 Compacting 1@1 + 6@2 files
+2023/08/29-16:49:12.506 8303 Generated table #213@1: 60776 keys, 2219597 bytes
+2023/08/29-16:49:12.560 8303 Generated table #214@1: 12391 keys, 2184988 bytes
+2023/08/29-16:49:12.628 8303 Generated table #215@1: 54367 keys, 1886048 bytes
+2023/08/29-16:49:12.628 8303 Compacted 1@1 + 6@2 files => 6290633 bytes
+2023/08/29-16:49:12.666 8303 compacted to: files[ 0 0 3 0 0 0 0 ]

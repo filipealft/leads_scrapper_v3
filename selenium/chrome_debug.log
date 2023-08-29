@@ -1,15 +1,13 @@
-[36897:259:0828/225023.422204:WARNING:chrome_main_delegate.cc(596)] This is Chrome version 116.0.5845.110 (not a warning)
-[36897:259:0828/225023.636258:INFO:chrome_browser_cloud_management_controller.cc(168)] Starting CBCM Controller Initialization
-[36897:259:0828/225023.636293:INFO:chrome_browser_cloud_management_controller.cc(196)] No machine level policy manager exists.
-[36897:47107:0828/225023.677811:ERROR:trust_store_mac.cc(844)] Error parsing certificate:
+[5793:259:0829/164820.342991:WARNING:chrome_main_delegate.cc(596)] This is Chrome version 116.0.5845.140 (not a warning)
+[5793:259:0829/164820.561056:INFO:chrome_browser_cloud_management_controller.cc(168)] Starting CBCM Controller Initialization
+[5793:259:0829/164820.561095:INFO:chrome_browser_cloud_management_controller.cc(196)] No machine level policy manager exists.
+[5793:43015:0829/164820.596958:ERROR:trust_store_mac.cc(844)] Error parsing certificate:
 ERROR: The policy qualifiers SEQUENCE is empty
 ERROR: Failed parsing policy qualifiers
 ERROR: Failed parsing certificate policies
 
-[36897:259:0828/225025.219809:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[36897:259:0828/225025.220018:INFO:CONSOLE(0)] "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.", source: https://web.whatsapp.com/send?phone=4899554102 (0)
-[36921:259:0828/225025.973794:ERROR:system_services.cc(31)] SetApplicationIsDaemon: Error Domain=NSOSStatusErrorDomain Code=-50 "paramErr: error in user parameter list" (-50)
-[36897:259:0828/225027.656440:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[36908:12803:0828/225029.008836:WARNING:sqlite_persistent_store_backend_base.cc(194)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:242 to client_task_runner_.
-[36908:12803:0828/225029.009419:WARNING:sqlite_persistent_store_backend_base.cc(194)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:242 to client_task_runner_.
-[36897:259:0828/225029.032632:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[5793:259:0829/164821.987937:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[5812:259:0829/164822.776861:ERROR:system_services.cc(31)] SetApplicationIsDaemon: Error Domain=NSOSStatusErrorDomain Code=-50 "paramErr: error in user parameter list" (-50)
+[5802:14595:0829/164837.971543:WARNING:sqlite_persistent_store_backend_base.cc(194)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:242 to client_task_runner_.
+[5802:14595:0829/164837.991080:WARNING:sqlite_persistent_store_backend_base.cc(194)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:242 to client_task_runner_.
+[5793:259:0829/164838.431035:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

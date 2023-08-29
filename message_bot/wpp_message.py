@@ -25,7 +25,7 @@ class WhatsAppBot():
         self.driver.set_window_size(1920, 1080)
         for index, phone in enumerate(phone_numbers):
             self.driver.get(f'https://web.whatsapp.com/send?phone={phone}')
-            text_box = WebDriverWait(self.driver, 15).until(EC.presence_of_element_located((By.XPATH, '//div[@role="textbox" and @title="Mensagem"]')))
+            text_box = WebDriverWait(self.driver, 60).until(EC.presence_of_element_located((By.XPATH, '//div[@role="textbox" and @title="Mensagem"]')))
             text_box.send_keys(message)
             time.sleep(3)
             text_box.send_keys(Keys.ENTER)
@@ -36,7 +36,7 @@ class WhatsAppBot():
 
 bot = WhatsAppBot()
 
-phone_numbers = ['4899554102', '4884948169'] 
+phone_numbers = ['4899554102'] 
 message = 'Olá! Esta é uma mensagem automática!'
 
 while True:
