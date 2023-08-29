@@ -27,7 +27,7 @@ class WhatsAppBot():
             self.driver.get(f'https://web.whatsapp.com/send?phone={phone}')
             text_box = WebDriverWait(self.driver, 60).until(EC.presence_of_element_located((By.XPATH, '//div[@role="textbox" and @title="Mensagem"]')))
             text_box.send_keys(message)
-            time.sleep(3)
+            time.sleep(2)
             text_box.send_keys(Keys.ENTER)
 
     def quit(self):
@@ -42,5 +42,6 @@ message = 'Olá! Esta é uma mensagem automática!'
 while True:
     bot.init_instance_chrome()
     bot.send_messages(phone_numbers, message)
+    time.sleep(2)
     bot.quit() 
-    time.sleep(30)
+    # time.sleep(30)
