@@ -8,7 +8,7 @@ import re
 import csv
 
 class GoogleLocalScraper():
-
+#
     def __init__(self):
         self.driver = None
         self.urls = []
