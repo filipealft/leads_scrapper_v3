@@ -75,7 +75,7 @@ def read_csv_urls(filename):
             urls.append(row['url'])
     return urls
 
-def funcao_main():
+def main_func():
     csv_filename = '/Users/user/Documents/i9_tech/leads_scrapper_v3/crawlers/urls.csv'
     urls = read_csv_urls(csv_filename)
 
@@ -87,7 +87,7 @@ def funcao_main():
 
     connection = database.connect_to_database()
     data_batch = []
-    batch_size = 50  # Você pode ajustar isso conforme sua necessidade
+    batch_size = 50 
 
     with webdriver.Chrome(options=chrome_options) as driver:
         scraper.driver = driver
@@ -96,12 +96,10 @@ def funcao_main():
             print(data)
             data_batch.append((data['Nome'], data['Telefone']))
 
-            # Se alcançarmos o tamanho do lote, inserimos os dados e limpamos o lote
             if len(data_batch) == batch_size:
                 database.batch_insert_data(connection, data_batch)
                 data_batch.clear()
 
-        # Inserir os dados restantes após o loop, se houver algum
         if data_batch:
             database.batch_insert_data(connection, data_batch)
 
@@ -109,4 +107,4 @@ def funcao_main():
 
 
 if __name__ == "__main__":
-    funcao_main()
+    main_func()
