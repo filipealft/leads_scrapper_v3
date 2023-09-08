@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 import re
 import csv
+import database
 
 class GoogleLocalScraper():
     def __init__(self):
@@ -32,7 +33,7 @@ class GoogleLocalScraper():
                     for est in establishments:
                         try:
                             phone_spans = est.find_elements(By.CSS_SELECTOR, 'span.hGz87c')
-                            phone_number = 'Telefone não disponível'
+                            phone_number = ''
 
                             for span in phone_spans:
                                 span_text = span.text
@@ -40,6 +41,8 @@ class GoogleLocalScraper():
                                 if len(digits) >= 8:
                                     phone_number = "".join(digits)
                                     break
+                            if phone_number == '':
+                                continue
 
                             establishment_name = est.find_element(By.CSS_SELECTOR, 'div.rgnuSb').text
                             data = {
@@ -48,7 +51,7 @@ class GoogleLocalScraper():
                             }
                             yield data
                         except NoSuchElementException:
-                            continue
+                            continue                
 
                     try:
                         next_button = self.driver.find_element(By.XPATH, '//button[@aria-label="Próxima"]')
@@ -82,10 +85,28 @@ def funcao_main():
     scraper = GoogleLocalScraper()
     scraper.set_urls(urls)
 
+    connection = database.connect_to_database()
+    data_batch = []
+    batch_size = 50  # Você pode ajustar isso conforme sua necessidade
+
     with webdriver.Chrome(options=chrome_options) as driver:
         scraper.driver = driver
+        
         for data in scraper.scrape_data():
             print(data)
+            data_batch.append((data['Nome'], data['Telefone']))
+
+            # Se alcançarmos o tamanho do lote, inserimos os dados e limpamos o lote
+            if len(data_batch) == batch_size:
+                database.batch_insert_data(connection, data_batch)
+                data_batch.clear()
+
+        # Inserir os dados restantes após o loop, se houver algum
+        if data_batch:
+            database.batch_insert_data(connection, data_batch)
+
+    connection.close()
+
 
 if __name__ == "__main__":
     funcao_main()
