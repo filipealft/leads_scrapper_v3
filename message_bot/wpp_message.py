@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import database
 
 class WhatsAppBot():
     def __init__(self):
@@ -29,6 +30,7 @@ class WhatsAppBot():
             text_box.send_keys(message)
             time.sleep(2)
             text_box.send_keys(Keys.ENTER)
+            database.update_lead_status_to_captured(phone)
 
     def quit(self):
         if self.driver:
@@ -36,7 +38,7 @@ class WhatsAppBot():
 
 bot = WhatsAppBot()
 
-phone_numbers = ['4899554102'] 
+phone_numbers = database.get_phone_leads_ready()
 message = 'Olá! Esta é uma mensagem automática!'
 
 while True:
