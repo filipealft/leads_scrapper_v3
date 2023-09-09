@@ -2,7 +2,7 @@ import mysql.connector
 
 def connect_to_database():
     conn = mysql.connector.connect(
-        host='18.119.110.40',
+        host='3.143.204.99',
         user='filipe_fortunato',
         password='Colorado13!',
         database='i9_tech',
@@ -16,10 +16,11 @@ def inject_leads():
     cursor = connection.cursor()
 
     query = """
-    INSERT INTO leads_ready (contact_name, phone, status)
-    SELECT contact_name, phone, 'stand by'
-    FROM leads_raw
-    WHERE SUBSTRING(phone, 3, 1) != '3';
+        INSERT IGNORE INTO leads_ready (contact_name, phone, status)
+        SELECT contact_name, phone, 'stand by'
+        FROM leads_raw
+        WHERE SUBSTRING(phone, 3, 1) != '3';
+
     """
 
     cursor.execute(query)
