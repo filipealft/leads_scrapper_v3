@@ -2,7 +2,7 @@ import mysql.connector
 
 def connect_to_database():
     conn = mysql.connector.connect(
-        host='13.59.172.35',
+        host='18.119.110.40',
         user='filipe_fortunato',
         password='Colorado13!',
         database='i9_tech',
@@ -35,3 +35,22 @@ def batch_insert_data(connection, data_list):
         print(f"Erro ao inserir dados: {err}")
     finally:
         cursor.close()
+
+def fetch_urls_from_database():
+    connection = connect_to_database()
+    cursor = connection.cursor()
+    query = "SELECT url_link FROM url WHERE status IS NULL OR status != 'captado'"
+    cursor.execute(query)
+    urls = [row[0] for row in cursor.fetchall()]
+    cursor.close()
+    connection.close()
+    return urls
+
+def mark_url_as_captured(url_link):
+    connection = connect_to_database()
+    cursor = connection.cursor()
+    query = "UPDATE url SET status = 'captado' WHERE url_link = %s"
+    cursor.execute(query, (url_link,))
+    connection.commit()
+    cursor.close()
+    connection.close()

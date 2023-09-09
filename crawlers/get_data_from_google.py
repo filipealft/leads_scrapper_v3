@@ -38,7 +38,7 @@ class GoogleLocalScraper():
                             for span in phone_spans:
                                 span_text = span.text
                                 digits = re.findall(r'\d', span_text)
-                                if len(digits) >= 8:
+                                if len(digits) >= 11:
                                     phone_number = "".join(digits)
                                     break
                             if phone_number == '':
@@ -76,8 +76,7 @@ def read_csv_urls(filename):
     return urls
 
 def main_func():
-    csv_filename = '/Users/user/Documents/i9_tech/leads_scrapper_v3/crawlers/urls.csv'
-    urls = read_csv_urls(csv_filename)
+    urls = database.fetch_urls_from_database()
 
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -92,13 +91,16 @@ def main_func():
     with webdriver.Chrome(options=chrome_options) as driver:
         scraper.driver = driver
         
-        for data in scraper.scrape_data():
-            print(data)
-            data_batch.append((data['Nome'], data['Telefone']))
+        for url in urls:
+            for data in scraper.scrape_data():
+                print(data)
+                data_batch.append((data['Nome'], data['Telefone']))
 
-            if len(data_batch) == batch_size:
-                database.batch_insert_data(connection, data_batch)
-                data_batch.clear()
+                if len(data_batch) == batch_size:
+                    database.batch_insert_data(connection, data_batch)
+                    data_batch.clear()
+
+            database.mark_url_as_captured(url)
 
         if data_batch:
             database.batch_insert_data(connection, data_batch)
