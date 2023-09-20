@@ -1,57 +1,37 @@
-[17934:259:0920/090753.823238:WARNING:chrome_main_delegate.cc(609)] This is Chrome version 117.0.5938.88 (not a warning)
-[17934:259:0920/090754.218957:INFO:policy_logger.cc(142)] :components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc(168) Starting CBCM Controller Initialization
-[17934:259:0920/090754.219885:INFO:policy_logger.cc(142)] :components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc(196) No machine level policy manager exists.
-[17934:33543:0920/090754.230744:ERROR:trust_store_mac.cc(844)] Error parsing certificate:
+[22150:259:0920/132027.534425:WARNING:chrome_main_delegate.cc(609)] This is Chrome version 117.0.5938.88 (not a warning)
+[22150:259:0920/132027.776997:INFO:policy_logger.cc(142)] :components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc(168) Starting CBCM Controller Initialization
+[22150:259:0920/132027.777051:INFO:policy_logger.cc(142)] :components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc(196) No machine level policy manager exists.
+[22150:33799:0920/132027.818918:ERROR:trust_store_mac.cc(844)] Error parsing certificate:
 ERROR: The policy qualifiers SEQUENCE is empty
 ERROR: Failed parsing policy qualifiers
 ERROR: Failed parsing certificate policies
 
-[17934:259:0920/090757.415712:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[17962:259:0920/090758.087214:ERROR:system_services.cc(31)] SetApplicationIsDaemon: Error Domain=NSOSStatusErrorDomain Code=-50 "paramErr: error in user parameter list" (-50)
-[17934:259:0920/090933.975325:INFO:CONSOLE(7)] "Another connection wants to delete database 'wawc_db_enc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (7)
-[17934:259:0920/090933.975741:INFO:CONSOLE(21)] "Another connection wants to delete database 'wawc_db_enc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/WAWebWorker.a1479933d1fab6ff7040.worker.js (21)
-[17934:259:0920/090941.030378:INFO:CONSOLE(7)] "Dexie.delete('model-storage') was blocked", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (7)
-[17934:259:0920/090945.174874:INFO:CONSOLE(50)] "Uncaught (in promise) NotInitializedError: Initialize storage before attempting to lock tables!", source: https://web.whatsapp.com/app.aab16172e1fa84fce9ba.js (50)
-[17934:259:0920/090945.187567:INFO:CONSOLE(2)] "Uncaught (in promise) Error: Comms::castStanza called before startComms", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (2)
-[17934:259:0920/090945.187710:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.187793:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.187861:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.187926:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.188025:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.188102:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.188168:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.188232:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.188294:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.188356:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.188573:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.188667:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.188765:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.207554:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.207631:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.207691:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.207788:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.207844:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.207884:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.207921:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.207956:INFO:CONSOLE(2)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (2)
-[17934:259:0920/090945.207994:INFO:CONSOLE(50)] "Uncaught (in promise) NotInitializedError: Initialize storage before attempting to lock tables!", source: https://web.whatsapp.com/app.aab16172e1fa84fce9ba.js (50)
-[17934:259:0920/090945.208044:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.208100:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.208153:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.208207:INFO:CONSOLE(2)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (2)
-[17934:259:0920/090945.208270:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db write operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.208341:INFO:CONSOLE(2)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (2)
-[17934:259:0920/090945.208390:INFO:CONSOLE(2)] "Uncaught (in promise) Error: Comms::sendIq called before startComms", source: https://web.whatsapp.com/send?phone=4899554102 (2)
-[17934:259:0920/090945.208439:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db read operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.208486:INFO:CONSOLE(50)] "Uncaught (in promise) NotInitializedError: Initialize storage before attempting to lock tables!", source: https://web.whatsapp.com/app.aab16172e1fa84fce9ba.js (50)
-[17934:259:0920/090945.208593:INFO:CONSOLE(2)] "Uncaught (in promise) Error: Unexpected null or undefined: me", source: https://web.whatsapp.com/send?phone=4899554102 (2)
-[17934:259:0920/090945.208654:INFO:CONSOLE(50)] "Uncaught (in promise) NotInitializedError: Initialize storage before attempting to lock tables!", source: https://web.whatsapp.com/app.aab16172e1fa84fce9ba.js (50)
-[17934:259:0920/090945.208712:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db write operation due to logout", source: https://web.whatsapp.com/ (0)
-[17934:259:0920/090945.308613:INFO:CONSOLE(14)] "Uncaught (in promise) Invariant Violation: [model-storage] Storage should be created first before being accessed", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (14)
-[17934:259:0920/090945.329932:INFO:CONSOLE(2)] "Uncaught (in promise) Error: Unexpected null or undefined: me", source: https://web.whatsapp.com/send?phone=4899554102 (2)
-[17934:259:0920/090945.348001:INFO:CONSOLE(2)] "Uncaught (in promise) Error: Unexpected null or undefined: me", source: https://web.whatsapp.com/send?phone=4899554102 (2)
-[17934:259:0920/090945.510349:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[17934:259:0920/090945.730721:INFO:CONSOLE(21)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (21)
-[17934:259:0920/090945.731279:INFO:CONSOLE(21)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (21)
-[17934:259:0920/090945.734811:INFO:CONSOLE(7)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (7)
-[17934:259:0920/090955.548586:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[22150:259:0920/132031.384258:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22180:259:0920/132032.334524:ERROR:system_services.cc(31)] SetApplicationIsDaemon: Error Domain=NSOSStatusErrorDomain Code=-50 "paramErr: error in user parameter list" (-50)
+[22158:27139:0920/132037.169840:ERROR:latency_info.cc(93)] CompositorFrameSinkSupport::MaybeSubmitCompositorFrame, LatencyInfo vector size 543 is too big.
+[22150:259:0920/132043.839031:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22158:27139:0920/132049.646468:ERROR:latency_info.cc(93)] CompositorFrameSinkSupport::MaybeSubmitCompositorFrame, LatencyInfo vector size 591 is too big.
+[22150:259:0920/132055.796676:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22150:259:0920/132111.098897:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22158:27139:0920/132116.512445:ERROR:latency_info.cc(93)] CompositorFrameSinkSupport::MaybeSubmitCompositorFrame, LatencyInfo vector size 581 is too big.
+[22150:259:0920/132123.032769:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22158:27139:0920/132128.502573:ERROR:latency_info.cc(93)] CompositorFrameSinkSupport::MaybeSubmitCompositorFrame, LatencyInfo vector size 625 is too big.
+[22150:259:0920/132134.276112:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22150:259:0920/132145.512140:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22158:27139:0920/132150.498679:ERROR:latency_info.cc(93)] CompositorFrameSinkSupport::MaybeSubmitCompositorFrame, LatencyInfo vector size 106 is too big.
+[22150:259:0920/132156.043302:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22150:259:0920/132206.814902:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22150:259:0920/132217.665392:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22150:259:0920/132228.760357:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22150:259:0920/132239.836764:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22158:27139:0920/132244.670736:ERROR:latency_info.cc(93)] CompositorFrameSinkSupport::MaybeSubmitCompositorFrame, LatencyInfo vector size 115 is too big.
+[22150:259:0920/132250.220089:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22158:27139:0920/132255.346605:ERROR:latency_info.cc(93)] CompositorFrameSinkSupport::MaybeSubmitCompositorFrame, LatencyInfo vector size 449 is too big.
+[22150:259:0920/132300.967353:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22150:259:0920/132306.164033:INFO:CONSOLE(7)] "Another connection wants to delete database 'wawc_db_enc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (7)
+[22150:259:0920/132306.164957:INFO:CONSOLE(21)] "Another connection wants to delete database 'wawc_db_enc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/WAWebWorker.a1479933d1fab6ff7040.worker.js (21)
+[22150:259:0920/132306.711138:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[22150:259:0920/132306.856416:INFO:CONSOLE(7)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (7)
+[22150:259:0920/132306.874150:INFO:CONSOLE(21)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (21)
+[22150:259:0920/132306.874677:INFO:CONSOLE(21)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (21)
+[22150:259:0920/132323.209743:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
