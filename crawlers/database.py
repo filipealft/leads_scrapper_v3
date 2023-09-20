@@ -2,7 +2,7 @@ import mysql.connector
 
 def connect_to_database():
     conn = mysql.connector.connect(
-        host='3.143.204.99',
+        host='3.142.98.31',
         user='filipe_fortunato',
         password='Colorado13!',
         database='i9_tech',
@@ -14,7 +14,12 @@ def check_phone_exists(phone):
     connection = connect_to_database()
     cursor = connection.cursor()
     query = """
-        SELECT COUNT(*) FROM leads_raw WHERE phone=%s
+        SELECT 
+            COUNT(*) 
+        FROM 
+            leads_raw 
+        WHERE 
+            phone=%s
     """
     cursor.execute(query, (phone,))
     count = cursor.fetchone()[0]
@@ -26,7 +31,7 @@ def check_phone_exists(phone):
 def batch_insert_data(connection, data_list):
     cursor = connection.cursor()
 
-    query = "INSERT IGNORE INTO leads_raw (contact_name, phone, segment) VALUES (%s, %s, 'barbearia')"
+    query = "INSERT IGNORE INTO leads_raw (contact_name, phone, segment) VALUES (%s, %s, %s)" 
 
     try:
         cursor.executemany(query, data_list)
@@ -36,15 +41,15 @@ def batch_insert_data(connection, data_list):
     finally:
         cursor.close()
 
-def fetch_urls_from_database():
+def fetch_urls_with_segments_from_database():
     connection = connect_to_database()
     cursor = connection.cursor()
-    query = "SELECT url_link FROM url WHERE status IS NULL OR status != 'captado'"
+    query = "SELECT url_link, segment FROM url WHERE status IS NULL OR status != 'captado'"
     cursor.execute(query)
-    urls = [row[0] for row in cursor.fetchall()]
+    urls_and_segments = [(row[0], row[1]) for row in cursor.fetchall()]
     cursor.close()
     connection.close()
-    return urls
+    return urls_and_segments
 
 def mark_url_as_captured(url_link):
     connection = connect_to_database()
