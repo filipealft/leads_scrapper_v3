@@ -32,7 +32,7 @@ class WhatsAppBot():
             self.driver.get(f'https://web.whatsapp.com/send?phone={phone}')
             text_box = WebDriverWait(self.driver, 120).until(EC.presence_of_element_located((By.XPATH, '//div[@role="textbox" and @title="Digite uma mensagem"]')))
             text_box.send_keys(message)
-            time.sleep(2)
+            time.sleep(5)
             text_box.send_keys(Keys.ENTER)
             database.update_lead_status_to_captured(phone)
 
@@ -58,7 +58,6 @@ dá uma espiada no nosso instagram: https://www.instagram.com/i9nichos/
 
 estamos em florianópolis. se quiser negociar, é só chamar.
 '''
-# message_template = remove_non_bmp_chars(message_template)
 
 while True:
     bot.init_instance_chrome()
