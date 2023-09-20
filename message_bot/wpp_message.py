@@ -35,7 +35,7 @@ class WhatsAppBot():
             message = message_template.replace("[Segmento do Estabelecimento]", segment)
             
             self.driver.get(f'https://web.whatsapp.com/send?phone={phone}')
-            text_box = WebDriverWait(self.driver, 120).until(EC.presence_of_element_located((By.XPATH, '//div[@role="textbox" and @title="Mensagem"]')))
+            text_box = WebDriverWait(self.driver, 120).until(EC.presence_of_element_located((By.XPATH, '//div[@role="textbox" and @title="Digite uma mensagem"]')))
             text_box.send_keys(message)
             time.sleep(2)
             text_box.send_keys(Keys.ENTER)
@@ -51,25 +51,26 @@ bot = WhatsAppBot()
 #     "loja de bebidas": "https://www.instagram.com/stories/highlights/18020038750661754/?r=1",
 #     # "Segmento2": "https://www.instagram.com/link_segmento2",
 # }
+def remove_non_bmp_chars(s):
+    return ''.join(c for c in s if c <= '\uFFFF')
 
 phone_numbers = database.get_phone_leads_ready()
-message_template = '''Oii tudo bem ?
+message_template = '''oii tudo bem ?
 
-Lucas aqui, da i9 Nichos, uma empresa especializada em nichos e móveis sob medida. Estava vendo o trabalho de vocês no segmento de [Segmento do Estabelecimento] e pensei que talvez gostariam de conhecer nossos produtos. 🪑✨ Se curtir a ideia, temos um desconto especial de 10% na primeira compra.
+lucas aqui, da i9 nichos, uma empresa especializada em nichos e móveis sob medida. estava vendo o trabalho de vocês no segmento de [Segmento do Estabelecimento] e pensei que talvez gostariam de conhecer nossos produtos. se curtir a ideia, temos um desconto especial de 10% na primeira compra.
 
-Todos os nossos produtos possuem medidas customizáveis, então com certeza teremos algo que te agrade!
+todos os nossos produtos possuem medidas customizáveis, então com certeza teremos algo que te agrade!
 
-Se quiser dar uma olhada nas nossas criações, temos um catálogo digital. Basta clicar no meu número de telefone aqui no whatsapp apertar no botão "Catálogo" para conferir.
+se quiser dar uma olhada nas nossas criações, temos um catálogo digital. basta clicar no meu número de telefone aqui no whatsapp apertar no botão "catálogo" para conferir.
 
-Dá uma espiada no nosso Instagram: https://www.instagram.com/i9nichos/
+dá uma espiada no nosso instagram: https://www.instagram.com/i9nichos/
 
-Estamos em Florianópolis. Se quiser negociar, é só chamar.
-
-Abraço,
-Lucas - i9 Nichos 😉'''
+estamos em florianópolis. se quiser negociar, é só chamar.
+'''
+# message_template = remove_non_bmp_chars(message_template)
 
 while True:
     bot.init_instance_chrome()
     bot.send_messages(phone_numbers, message_template)
-    time.sleep(2)
+    time.sleep(10)
     bot.quit()
