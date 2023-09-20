@@ -76,25 +76,26 @@ def read_csv_urls(filename):
     return urls
 
 def main_func():
-    urls = database.fetch_urls_from_database()
+    urls_and_segments = database.fetch_urls_with_segments_from_database()
 
     chrome_options = Options()
     chrome_options.add_argument("--headless")
 
     scraper = GoogleLocalScraper()
-    scraper.set_urls(urls)
+
+    scraper.set_urls([url for url, segment in urls_and_segments])
 
     connection = database.connect_to_database()
     data_batch = []
-    batch_size = 50 
+    batch_size = 50
 
     with webdriver.Chrome(options=chrome_options) as driver:
         scraper.driver = driver
         
-        for url in urls:
+        for url, segment in urls_and_segments:
             for data in scraper.scrape_data():
                 print(data)
-                data_batch.append((data['Nome'], data['Telefone']))
+                data_batch.append((data['Nome'], data['Telefone'], segment))
 
                 if len(data_batch) == batch_size:
                     database.batch_insert_data(connection, data_batch)
