@@ -27,11 +27,6 @@ class WhatsAppBot():
         self.driver.set_window_size(1920, 1080)
         for phone in phone_numbers:
             segment = database.get_phone_and_segment_for_phone(phone)
-            # if segment and segment in INSTAGRAM_LINKS:
-            #     instagram_link = INSTAGRAM_LINKS[segment]
-            # else:
-            #     instagram_link = "https://www.instagram.com/i9nichos/" 
-
             message = message_template.replace("[Segmento do Estabelecimento]", segment)
             
             self.driver.get(f'https://web.whatsapp.com/send?phone={phone}')
@@ -47,10 +42,6 @@ class WhatsAppBot():
 
 bot = WhatsAppBot()
 
-# INSTAGRAM_LINKS = {
-#     "loja de bebidas": "https://www.instagram.com/stories/highlights/18020038750661754/?r=1",
-#     # "Segmento2": "https://www.instagram.com/link_segmento2",
-# }
 def remove_non_bmp_chars(s):
     return ''.join(c for c in s if c <= '\uFFFF')
 
@@ -72,5 +63,5 @@ estamos em florianópolis. se quiser negociar, é só chamar.
 while True:
     bot.init_instance_chrome()
     bot.send_messages(phone_numbers, message_template)
-    time.sleep(10)
+    time.sleep(60)
     bot.quit()
