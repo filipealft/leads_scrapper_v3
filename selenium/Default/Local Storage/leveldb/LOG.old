@@ -1,3 +1,6 @@
-2023/09/20-13:18:12.770 3b03 Reusing MANIFEST /Users/user/Documents/i9_tech/leads_scrapper_v3/selenium/Default/Local Storage/leveldb/MANIFEST-000001
-2023/09/20-13:18:12.772 3b03 Recovering log #6
-2023/09/20-13:18:12.772 3b03 Reusing old log /Users/user/Documents/i9_tech/leads_scrapper_v3/selenium/Default/Local Storage/leveldb/000006.log 
+2023/09/27-12:34:16.897 3a03 Reusing MANIFEST /Users/user/Documents/i9_tech/leads_scrapper_v3/selenium/Default/Local Storage/leveldb/MANIFEST-000001
+2023/09/27-12:34:16.898 3a03 Recovering log #6
+2023/09/27-12:34:16.899 3a03 Reusing old log /Users/user/Documents/i9_tech/leads_scrapper_v3/selenium/Default/Local Storage/leveldb/000006.log 
+2023/09/27-12:36:20.134 3403 Level-0 table #9: started
+2023/09/27-12:36:20.155 3403 Level-0 table #9: 22288 bytes OK
+2023/09/27-12:36:20.195 3403 Delete type=0 #6
