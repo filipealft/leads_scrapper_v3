@@ -2,7 +2,7 @@ import mysql.connector
 
 def connect_to_database():
     conn = mysql.connector.connect(
-        host='18.117.159.147',
+        host='3.147.145.146',
         user='filipe_fortunato',
         password='Colorado13!',
         database='i9_tech',
@@ -20,6 +20,8 @@ def get_phone_leads_ready():
             leads_ready 
         WHERE 
             status = 'stand by'
+        LIMIT
+            50
     """
     cursor.execute(query)
     data = [item[0] for item in cursor.fetchall()]
